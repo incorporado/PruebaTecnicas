@@ -31,7 +31,7 @@ namespace cola
             {
                 Nodo auxiliar = this.nodoInicial;
                 while (auxiliar.getSiguiente() != null) 
-                    auxiliar.setSiguiente(auxiliar.getSiguiente());
+                    auxiliar = auxiliar.getSiguiente();
                 Nodo nuevo = new Nodo(item);
                 auxiliar.setSiguiente(nuevo);                
             }
