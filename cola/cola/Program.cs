@@ -9,6 +9,21 @@ namespace cola
     {
         static void Main(string[] args)
         {
+            Lista unaCola = new Lista();
+            int a = unaCola.Size;
+            Console.WriteLine(a);
+            unaCola.Add(10);
+            unaCola.Add(20);
+            a = unaCola.Size;
+            Console.WriteLine(a);
+            object item = unaCola.Top;
+            Console.WriteLine((int)item);
+            unaCola.Remove();
+            item = unaCola.Top;
+            Console.WriteLine((int)item);
+            unaCola.Remove();
+            a = unaCola.Size;
+            Console.WriteLine(a);
             Console.Write("hola mundo");
             Console.In.ReadLine();
         }

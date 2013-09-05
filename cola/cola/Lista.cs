@@ -11,36 +11,47 @@ namespace cola
         
         private int tamanio;
         
-        public Lista(object item)
-        {            
+        public Lista()
+        {
             this.tamanio = 0;
+            this.nodoInicial = new Nodo(null);
         }
         
-        bool ICola.IsEmpty { get { return ((int)this.nodoInicial.getDato() == -1); } }
+        public bool IsEmpty { get { return ((int)this.nodoInicial.getDato() == -1); } }
 
-        int ICola.Size { get { return this.tamanio; } }
+        public int Size { get { return this.tamanio; } }
 
-        void ICola.Add(object item)
+        public void Add(object item)
         { // agregar un item. 
-            if ((int)this.nodoInicial.getDato() == -1) this.nodoInicial = new Nodo(item);
+            if (this.nodoInicial.getDato() == null)
+            {
+                this.nodoInicial = new Nodo(item);                
+            }
             else
             {
-                this.nodoInicial.getSiguiente().setDato(item);
-                this.nodoInicial.getSiguiente().setSiguiente(-1);
+                Nodo auxiliar = this.nodoInicial;
+                while (auxiliar.getSiguiente() != null) 
+                    auxiliar.setSiguiente(auxiliar.getSiguiente());
+                Nodo nuevo = new Nodo(item);
+                auxiliar.setSiguiente(nuevo);                
             }
+            this.tamanio++;
         }
-        
-        object ICola.Top
+
+        public object Top
         { // retornar el primer item, lanzar exception si esta vacio.        
             get
             {
-                 return (object) this.nodoInicial;                
+                if (this.nodoInicial.getDato() == null) throw new NullReferenceException();
+                return (object) this.nodoInicial.getDato();                
             }            
         }
 
-        void ICola.Remove() // remover el primer item, lanzar exception si esta vacio.
+        public void Remove() // remover el primer item, lanzar exception si esta vacio.
         {
-            this.nodoInicial = this.nodoInicial.getSiguiente();
+            if (this.nodoInicial.getDato() == null) throw new NullReferenceException ();
+            else this.nodoInicial = this.nodoInicial.getSiguiente();
+            this.tamanio--;
         } 
     }
 }
