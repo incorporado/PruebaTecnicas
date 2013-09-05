@@ -18,7 +18,7 @@ namespace cola
             //Test excepcion Top
             try
             {
-                object item = unaCola.Top;
+                object contenido = unaCola.Top;
             }
             catch (NullReferenceException e)
             {
@@ -35,7 +35,7 @@ namespace cola
                 Console.WriteLine("No hay elementos en la cola", e);
             }
 
-            /*
+            
             //Test Add
             unaCola.Add(10);
             unaCola.Add(20);
@@ -60,7 +60,7 @@ namespace cola
             Console.WriteLine((int)item);
             unaCola.Remove();
             a = unaCola.Size;
-            Console.WriteLine(a);*/
+            Console.WriteLine(a);
 
             Console.Write("Exito");
             Console.In.ReadLine();
