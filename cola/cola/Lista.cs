@@ -43,15 +43,18 @@ namespace cola
             get
             {
                 if (this.nodoInicial.getDato() == null) throw new NullReferenceException();
-                return (object) this.nodoInicial.getDato();                
+                else return (object) this.nodoInicial.getDato();                                
             }            
         }
 
         public void Remove() // remover el primer item, lanzar exception si esta vacio.
         {
-            if (this.nodoInicial.getDato() == null) throw new NullReferenceException ();
-            else this.nodoInicial = this.nodoInicial.getSiguiente();
-            this.tamanio--;
+            if (this.nodoInicial.getDato() == null) throw new NullReferenceException();
+            else
+            {
+                this.nodoInicial = this.nodoInicial.getSiguiente();
+                this.tamanio--;
+            }
         } 
     }
 }

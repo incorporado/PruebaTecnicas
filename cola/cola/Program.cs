@@ -10,8 +10,33 @@ namespace cola
         static void Main(string[] args)
         {
             Lista unaCola = new Lista();
+            
+            //Test Size
             int a = unaCola.Size;
             Console.WriteLine(a);
+            
+            //Test excepcion Top
+            try
+            {
+                object item = unaCola.Top;
+            }
+            catch (NullReferenceException e)
+            {
+                Console.WriteLine("No hay elementos en la cola", e);
+            }
+
+            //Test excepcion Remove
+            try
+            {
+                unaCola.Remove();
+            }
+            catch (NullReferenceException e)
+            {
+                Console.WriteLine("No hay elementos en la cola", e);
+            }
+
+            /*
+            //Test Add
             unaCola.Add(10);
             unaCola.Add(20);
             unaCola.Add(30);
@@ -19,6 +44,8 @@ namespace cola
             unaCola.Add(50);
             a = unaCola.Size;
             Console.WriteLine(a);
+             
+            //Test general 
             object item = unaCola.Top;
             Console.WriteLine((int)item);
             unaCola.Remove();
@@ -33,8 +60,9 @@ namespace cola
             Console.WriteLine((int)item);
             unaCola.Remove();
             a = unaCola.Size;
-            Console.WriteLine(a);
-            Console.Write("hola mundo");
+            Console.WriteLine(a);*/
+
+            Console.Write("Exito");
             Console.In.ReadLine();
         }
     }
