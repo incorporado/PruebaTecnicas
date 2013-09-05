@@ -42,14 +42,14 @@ namespace cola
         { // retornar el primer item, lanzar exception si esta vacio.        
             get
             {
-                if (this.nodoInicial.getDato() == null) throw new NullReferenceException();
+                if (this.nodoInicial.getDato() == null) throw new InvalidOperationException();
                 else return (object) this.nodoInicial.getDato();                                
             }            
         }
 
         public void Remove() // remover el primer item, lanzar exception si esta vacio.
         {
-            if (this.nodoInicial.getDato() == null) throw new NullReferenceException();
+            if (this.nodoInicial.getDato() == null) throw new InvalidOperationException();
             else
             {
                 this.nodoInicial = this.nodoInicial.getSiguiente();

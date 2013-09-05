@@ -20,7 +20,7 @@ namespace cola
             {
                 object contenido = unaCola.Top;
             }
-            catch (NullReferenceException e)
+            catch (InvalidOperationException e)
             {
                 Console.WriteLine("No hay elementos en la cola", e);
             }
@@ -30,7 +30,7 @@ namespace cola
             {
                 unaCola.Remove();
             }
-            catch (NullReferenceException e)
+            catch (InvalidOperationException e)
             {
                 Console.WriteLine("No hay elementos en la cola", e);
             }
