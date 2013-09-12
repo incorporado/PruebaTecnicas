@@ -5,7 +5,7 @@ using System.Text;
 
 namespace cola
 {
-    class Nodo
+    class Nodo 
     {
         object dato;
         private Nodo siguiente;
@@ -14,10 +14,10 @@ namespace cola
         public void setSiguiente(Nodo nuevo) { this.siguiente = nuevo;}
         public object getDato () { return this.dato;}
         public Nodo getSiguiente () { return this.siguiente;}
-        public Nodo(object dato)
+        public Nodo (object dato)
         {
-            this.dato = dato;
-            this.siguiente = null;            
+            this.dato = dato;            
         }
     }
 }
+

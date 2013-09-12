@@ -1,0 +1,5 @@
+C:\Users\Daniel\Documents\Visual Studio 2010\Projects\PruebaTecnicas\pruebaTests\pruebaTests\bin\Debug\pruebaTests.exe
+C:\Users\Daniel\Documents\Visual Studio 2010\Projects\PruebaTecnicas\pruebaTests\pruebaTests\bin\Debug\pruebaTests.pdb
+C:\Users\Daniel\Documents\Visual Studio 2010\Projects\PruebaTecnicas\pruebaTests\pruebaTests\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Daniel\Documents\Visual Studio 2010\Projects\PruebaTecnicas\pruebaTests\pruebaTests\obj\x86\Debug\pruebaTests.exe
+C:\Users\Daniel\Documents\Visual Studio 2010\Projects\PruebaTecnicas\pruebaTests\pruebaTests\obj\x86\Debug\pruebaTests.pdb

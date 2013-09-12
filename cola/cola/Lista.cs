@@ -8,33 +8,42 @@ namespace cola
     class Lista : ICola
     {
         private Nodo nodoInicial;
+
+        private Nodo iterador;
         
         private int tamanio;
         
         public Lista()
-        {
-            this.tamanio = 0;
-            this.nodoInicial = new Nodo(null);
+        {            
+            this.tamanio = 0;            
         }
         
-        public bool IsEmpty { get { return ((int)this.nodoInicial.getDato() == -1); } }
+        public bool IsEmpty { get { return (this.nodoInicial.getDato() == null); } }
 
         public int Size { get { return this.tamanio; } }
 
         public void Add(object item)
-        { // agregar un item. 
-            if (this.nodoInicial.getDato() == null)
+        { // agregar un item.            
+            try
             {
-                this.nodoInicial = new Nodo(item);                
+                this.nodoInicial.getDato();
+                try
+                {
+                    this.iterador.getSiguiente().getDato();
+                }
+                catch (NullReferenceException e)
+                {
+                    Nodo nuevo = new Nodo(item);
+                    this.iterador.setSiguiente(nuevo);
+                    this.iterador = this.iterador.getSiguiente();
+                }
             }
-            else
+            catch (NullReferenceException e)
             {
-                Nodo auxiliar = this.nodoInicial;
-                while (auxiliar.getSiguiente() != null) 
-                    auxiliar = auxiliar.getSiguiente();
-                Nodo nuevo = new Nodo(item);
-                auxiliar.setSiguiente(nuevo);                
-            }
+                this.nodoInicial = new Nodo(item);
+                this.iterador = this.nodoInicial;
+            }           
+
             this.tamanio++;
         }
 
@@ -42,19 +51,28 @@ namespace cola
         { // retornar el primer item, lanzar exception si esta vacio.        
             get
             {
-                if (this.nodoInicial.getDato() == null) throw new InvalidOperationException();
-                else return (object) this.nodoInicial.getDato();                                
+                try
+                {
+                    return (object) this.nodoInicial.getDato();                                
+                }
+                catch (NullReferenceException e)
+                {
+                    throw new InvalidOperationException();
+                }                
             }            
         }
 
         public void Remove() // remover el primer item, lanzar exception si esta vacio.
         {
-            if (this.nodoInicial.getDato() == null) throw new InvalidOperationException();
-            else
+            try
             {
                 this.nodoInicial = this.nodoInicial.getSiguiente();
-                this.tamanio--;
+                this.tamanio--;   
             }
+            catch (NullReferenceException e)
+            {
+                throw new InvalidOperationException();
+            }           
         } 
     }
 }

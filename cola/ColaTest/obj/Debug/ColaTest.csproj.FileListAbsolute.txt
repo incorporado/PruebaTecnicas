@@ -1,0 +1,7 @@
+C:\Users\Daniel\Documents\Visual Studio 2010\Projects\PruebaTecnicas\cola\ColaTest\bin\Debug\ColaTest.dll
+C:\Users\Daniel\Documents\Visual Studio 2010\Projects\PruebaTecnicas\cola\ColaTest\bin\Debug\ColaTest.pdb
+C:\Users\Daniel\Documents\Visual Studio 2010\Projects\PruebaTecnicas\cola\ColaTest\bin\Debug\cola.exe
+C:\Users\Daniel\Documents\Visual Studio 2010\Projects\PruebaTecnicas\cola\ColaTest\bin\Debug\cola.pdb
+C:\Users\Daniel\Documents\Visual Studio 2010\Projects\PruebaTecnicas\cola\ColaTest\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Daniel\Documents\Visual Studio 2010\Projects\PruebaTecnicas\cola\ColaTest\obj\Debug\ColaTest.dll
+C:\Users\Daniel\Documents\Visual Studio 2010\Projects\PruebaTecnicas\cola\ColaTest\obj\Debug\ColaTest.pdb
